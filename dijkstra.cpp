@@ -97,6 +97,12 @@ int dijkstra(int s, int t) {
             continue;
         }
         dprintf("Processing node %d\n", node.idx + 1);
+
+        if (node.idx == t) {
+            dprintf("Found path to target node %d\n", t);
+            break;
+        }
+
         processed_in[node.idx] = epoch;
         for (Edge &e : g[node.idx]) {
             if (updated_in[e.target] != epoch || dist[node.idx] + e.length < dist[e.target]) {
