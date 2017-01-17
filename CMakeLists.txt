@@ -3,4 +3,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(dijkstra dijkstra.cpp)
 add_executable(bidirectional_dijkstra bidirectional_dijkstra.cpp)
+add_executable(arc_flags arc_flags.cpp)
 add_executable(contraction_hierarchy contraction_hierarchy.cpp)
